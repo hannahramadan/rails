@@ -125,6 +125,7 @@ module ActionController
       DataStreaming,
       DefaultHeaders,
       Logging,
+      Live,
 
       # Before callbacks should also be executed as early as possible, so
       # also include them at the bottom.

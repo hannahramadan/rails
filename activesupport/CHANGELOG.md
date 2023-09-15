@@ -1,5 +1,11 @@
 ## Rails 7.1.0.beta1 (September 13, 2023) ##
 
+*   Add instrumentation for ActionController::Live#send_stream
+
+    Allows subscribing to `send_stream` events. The event payload contains the filename, disposition, and type.
+
+    *Hannah Ramadan*
+
 *   Add `drb`, `mutex_m` and `base64` that are bundled gem candidates for Ruby 3.4
 
     *Yasuo Honda*
