@@ -1,11 +1,10 @@
 ## Rails 7.1.0.beta1 (September 13, 2023) ##
 
-*   `AbstractController::Translation.raise_on_missing_translations` removed
+*   Add instrumentation for ActionController::Live#send_stream
 
-    This was a private API, and has been removed in favour of a more broadly applicable
-    `config.i18n.raise_on_missing_translations`. See the upgrading guide for more information.
+    Allows subscribing to `send_stream` events. The event payload contains the filename, disposition, and type.
 
-    *Alex Ghiculescu*
+    *Hannah Ramadan*
 
 *   Add `ActionController::Parameters#extract_value` method to allow extracting serialized values from params
 

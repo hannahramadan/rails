@@ -221,6 +221,7 @@ module ActionController
       HttpAuthentication::Token::ControllerMethods,
       DefaultHeaders,
       Logging,
+      Live,
 
       # Before callbacks should also be executed as early as possible, so
       # also include them at the bottom.

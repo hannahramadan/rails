@@ -44,6 +44,13 @@ module ActionController
       end
     end
 
+    def send_stream(filename:, disposition: "attachment", type: nil)
+      payload = { filename: filename, disposition: disposition, type: type }
+      ActiveSupport::Notifications.instrument("send_stream.action_controller", payload) do
+        super
+      end
+    end
+
     def redirect_to(*)
       ActiveSupport::Notifications.instrument("redirect_to.action_controller", request: request) do |payload|
         result = super
