@@ -66,6 +66,17 @@ module ActionController
       end
     end
 
+    module Instrumentation
+      def send_stream(filename:, disposition: "attachment", type: nil)
+        payload = { filename: filename, disposition: disposition, type: type }
+        ActiveSupport::Notifications.instrument("send_stream.action_controller", payload) do
+          super
+        end
+      end
+    end
+
+    prepend Instrumentation
+
     # = Action Controller \Live Server Sent Events
     #
     # This class provides the ability to write an SSE (Server Sent Event)
