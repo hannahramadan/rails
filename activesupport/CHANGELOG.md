@@ -4,6 +4,4 @@
 
     *Hannah Ramadan*
 
-*   Use Ruby 3.3 Range#overlap? if available
-
 Please check [7-1-stable](https://github.com/rails/rails/blob/7-1-stable/activesupport/CHANGELOG.md) for previous changes.
